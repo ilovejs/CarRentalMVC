@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SDKSample xmlns="http://www.telerik.com/OpenAccess/SDK">
+  <ShortName>ASP.NET MVC 4 using a Domain Model</ShortName>
+  <State>Updated</State>
+  <Type>Example</Type>
+  <Complexity>400</Complexity>
+  <Areas>
+    <Area>ASP.NET MVC</Area>
+  </Areas>
+  <DocumentUrl />
+  <DocumentPath>Documentation/Mht/SCRMVC3WebFormsDomainModel.mht</DocumentPath>
+  <Language>C#</Language>
+  <Folder>Content\Samples\ASP\CSharp\SofiaCarRentalMvc4DomainModelForms</Folder>
+  <SampleSolution>SofiaCarRental.sln</SampleSolution>
+  <FolderUnitTest>Content\Samples\ASP\CSharp\SofiaCarRentalMvc4DomainModelForms</FolderUnitTest>
+  <UnitTestStartup>SofiaCarRentalTests.sln</UnitTestStartup>
+  <UpgradePaths>
+  </UpgradePaths>
+  <Doc></Doc>
+  <Keywords>
+    <Keyword>ASP.NET MVC 4</Keyword>
+    <Keyword>BestPractices</Keyword>
+  </Keywords>
+  <WebProjectsToRun>
+    <Project>SofiaCarRental</Project>
+  </WebProjectsToRun>
+  <Assets>
+    <Asset>
+      <Name>SofiaCarRental_v2.2</Name>
+      <FileName>SofiaCarRental_v2.2.sql</FileName>
+    </Asset>
+  </Assets>
+  <SampleInfo>
+    <ImagePath>../Content/Common</ImagePath>
+    <Overview>
+      <Name>ASP.NET MVC 4 using a Domain Model</Name>
+      <Description>
+        This example demonstrates the best practices for integrating Telerik Data Access in ASP.NET MVC 4 applications. It uses the SofiaCarRental database.
+      </Description>
+    </Overview>
+    <Introduction>
+      <Summary>
+        The sample application demonstrates how to use Telerik Data Access as a Data Access Layer of an ASP.NET MVC 4 application.
+        It follows the design principle of loose coupling and the code is fully covered by unit tests.
+      </Summary>
+      <Goals>
+        <Goal>
+          Consume a Telerik Data Access model in ASP.NET MVC 4 presentation layer.
+        </Goal>
+        <Goal>
+          Manage OpenAccessContext in a web environment using an IoC container.
+        </Goal>
+        <Goal>
+          Define unit tests for the Data Access Layer.
+        </Goal>
+        <Goal>
+          Integrate Telerik UI for ASP.NET MVC with Telerik Data Access.
+        </Goal>
+        <Goal>
+          Use the Database-First Approach to define the relational mapping.
+        </Goal>
+      </Goals>
+    </Introduction>
+    <Screenshots>
+    </Screenshots>
+    <GettingStarted>
+      <Paragraph>
+        The example consists of two main parts - a core project where the Data Access Layer based on Telerik Data Access resides and an ASP.NET MVC 4 web application.
+        The application utilizes the functionality provided by the data layer and shapes the UI with the slick controls provided by Telerik.
+      </Paragraph>
+      <Paragraph>
+        1. Click Open Solution or Open Test Solution in Telerik Data Access Samples Kit.
+      </Paragraph>
+      <Paragraph>
+        2. If the Database Management Tool dialog is shown, enter your MS SQL Server instance and continue. Telerik Data Access Samples Kit will import the needed database to your server and open the already configured solution in Visual Studio.
+      </Paragraph>
+      <Paragraph>
+        3. On the <bold>Build</bold> menu, click <bold>Rebuild Solution</bold>.
+      </Paragraph>
+      <Paragraph>
+        4. In <bold>Solution Explorer</bold>, right click on the <bold>SofiaCarRental</bold> project and select <bold>Set as StartUp Project</bold>.
+      </Paragraph>
+      <Paragraph>
+        5. Press <bold>F5</bold> to run the application.
+      </Paragraph>
+    </GettingStarted>
+    <SampleCharacteristics>
+      <Accessibility>false</Accessibility>
+      <ArchitectureDiagram>false</ArchitectureDiagram>
+      <Comments>false</Comments>
+      <Documentation>true</Documentation>
+      <ErrorHandling>false</ErrorHandling>
+      <Localizable>false</Localizable>
+      <Overview>true</Overview>
+      <Supported>true</Supported>
+      <UnitTests>true</UnitTests>
+      <Style>Example</Style>
+    </SampleCharacteristics>
+    <Requirements>
+      <Requirement>
+        <Code>NET40</Code>
+        <Name>.NET Framework 4</Name>
+        <Description>This sample requires .NET 4 to run.</Description>
+        <URL><![CDATA[http://www.microsoft.com/downloads/en/details.aspx?FamilyID=9cfb2d51-5ff4-4491-b0e5-b386f32c0992&displaylang=en]]></URL>
+      </Requirement>
+      <Requirement>
+        <Code>VS2010</Code>
+        <Name>Visual Studio 2010</Name>
+        <Description>This sample requires Visual Studio 2010 to run.</Description>
+        <URL><![CDATA[http://www.microsoft.com/visualstudio/en-us/]]></URL>
+      </Requirement>
+      <Requirement>
+        <Code>MVC4</Code>
+        <Name>ASP.NET MVC 4</Name>
+        <Description>This sample requires ASP.NET MVC 4 to run.</Description>
+        <URL><![CDATA[http://www.asp.net/mvc/mvc3]]></URL>
+      </Requirement>
+      <Requirement>
+        <Code>MSSQL</Code>
+        <Name>Microsoft SQL Server</Name>
+        <Description>This sample requires a SQL Server 2005 or greater instance to run.</Description>
+        <URL><![CDATA[http://www.microsoft.com/sqlserver/en/us/default.aspx]]></URL>
+      </Requirement>
+	  <Requirement>
+        <Code>NugetPackagesRestore</Code>
+        <Name>Nuget Package Manager</Name>
+        <Description>This sample is using a NuGet package restore during its build.		
+This requires to enable the "Allow NuGet to download missing packages during build" setting. 
+You could enable it under the Visual Studio -> Tools menu -> Options -> Package Manager menu.
+(If you are using Visual Studio 2010, please verify that you have the Nuget Package Manager installed.)</Description>
+        <URL><![CDATA[http://visualstudiogallery.msdn.microsoft.com/27077b70-9dad-4c64-adcf-c7cf6bc9970c]]></URL>
+      </Requirement>
+    </Requirements>
+    <AdditionalResources />
+    <History>
+      <Change>
+        <Date>2012-01-06</Date>
+        <Description>Integrated this sample into Telerik Data Access Samples Kit.</Description>
+      </Change>
+      <Change>
+        <Date>2012-11-20</Date>
+        <Description>
+          Added new unit tests;
+          A Visual Studio 2012 solution is added.
+        </Description>
+      </Change>
+      <Change>
+        <Date>2013-01-28</Date>
+        <Description>
+          The example uses the new version (2.2) of the SofiaCarRental database.
+        </Description>
+      </Change>
+	  <Change>
+        <Date>2013-12-06</Date>
+        <Description>
+          Migrated the sample to MVC4.
+        </Description>
+      </Change>
+    </History>
+  </SampleInfo>
+</SDKSample>

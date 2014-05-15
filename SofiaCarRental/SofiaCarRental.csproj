@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D159C6C4-A50C-4B20-A750-B1959820E4AF}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SofiaCarRental</RootNamespace>
+    <AssemblyName>SofiaCarRental</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=2.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net40\Ninject.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Ninject.Web.Common">
+      <HintPath>..\packages\Ninject.Web.Common.3.0.0.7\lib\net40-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=2.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.MVC3.3.0.0.6\lib\net40-full\Ninject.Web.Mvc.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.Mvc, Version=2013.2.611.340, Culture=neutral, PublicKeyToken=29ac1a93ec063d92, processorArchitecture=MSIL">
+      <HintPath>..\packages\TelerikMvcExtensions.2013.2.611\lib\net40\Telerik.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess, Version=2014.1.403.2, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <Private>True</Private>
+      <HintPath>D:\Users\m.zhuang\AppData\Local\Telerik.DataAccess.SamplesKit\Dependencies\Telerik.OpenAccess.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2014.1.403.2, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>D:\Users\m.zhuang\AppData\Local\Telerik.DataAccess.SamplesKit\Dependencies\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.Runtime, Version=2014.1.403.2, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>D:\Users\m.zhuang\AppData\Local\Telerik.DataAccess.SamplesKit\Dependencies\Telerik.OpenAccess.Runtime.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\EditorLocalization.bg-BG.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.bg-BG.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.da-DK.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.da-DK.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.de-DE.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.de-DE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.en-US.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.fr-FR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.nl-NL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.nl-NL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.pl-PL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.pl-PL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.pt-BR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.pt-BR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.pt-PT.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.pt-PT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.ru-RU.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.ru-RU.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.uk-UA.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.uk-UA.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EditorLocalization.zh-CN.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorLocalization.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.bg-BG.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.bg-BG.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.da-DK.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.da-DK.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.de-DE.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.de-DE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.en-US.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.es-ES.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.fr-FR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.nl-NL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.nl-NL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.pl-PL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.pl-PL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.pt-BR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.pt-BR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.pt-PT.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.pt-PT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.ru-RU.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.ru-RU.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.uk-UA.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.uk-UA.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GridLocalization.zh-CN.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.bg-BG.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.bg-BG.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.da-DK.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.da-DK.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.en-US.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.fr-FR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.nl-NL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.nl-NL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.pl-PL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.pl-PL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.pt-BR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.pt-BR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.pt-PT.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.pt-PT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.ru-RU.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.ru-RU.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UploadLocalization.zh-CN.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadLocalization.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CarController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CarsSearchUtils.cs" />
+    <Compile Include="Helpers\RentalOrderHelper.cs" />
+    <Compile Include="Helpers\SystemTime.cs" />
+    <Compile Include="IoC\ControllerModule.cs" />
+    <Compile Include="Models\CarDetailViewModel.cs" />
+    <Compile Include="Models\CarsModelView.cs" />
+    <Compile Include="Models\DatePickerModelView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CarRepository.cs" />
+    <Compile Include="Repositories\ICarRepository.cs" />
+    <Compile Include="Repositories\IRentalOrderRepository.cs" />
+    <Compile Include="Repositories\IRentalRateRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\RentalOrderRepository.cs" />
+    <Compile Include="Repositories\RentalRateRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Services\CarService.cs" />
+    <Compile Include="Services\OrderService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Clear\editor.png" />
+    <Content Include="Content\Clear\imagebrowser.png" />
+    <Content Include="Content\Clear\loading.gif" />
+    <Content Include="Content\Clear\slider-h-both.gif" />
+    <Content Include="Content\Clear\slider-h-bottom.gif" />
+    <Content Include="Content\Clear\slider-h-top.gif" />
+    <Content Include="Content\Clear\slider-hs-both.gif" />
+    <Content Include="Content\Clear\slider-hs-bottom.gif" />
+    <Content Include="Content\Clear\slider-hs-top.gif" />
+    <Content Include="Content\Clear\slider-v-both.gif" />
+    <Content Include="Content\Clear\slider-v-left.gif" />
+    <Content Include="Content\Clear\slider-v-right.gif" />
+    <Content Include="Content\Clear\slider-vs-both.gif" />
+    <Content Include="Content\Clear\slider-vs-left.gif" />
+    <Content Include="Content\Clear\slider-vs-right.gif" />
+    <Content Include="Content\Clear\sprite-vertical.png" />
+    <Content Include="Content\Clear\sprite.png" />
+    <Content Include="Content\Clear\treeview-line.png" />
+    <Content Include="Content\Clear\treeview-nodes-rtl.png" />
+    <Content Include="Content\Clear\treeview-nodes.png" />
+    <Content Include="Content\Images\bg.jpg" />
+    <Content Include="Content\Images\bgDates.png" />
+    <Content Include="Content\Images\bgFill.jpg" />
+    <Content Include="Content\Images\bhBack.png" />
+    <Content Include="Content\Images\carItem1.gif" />
+    <Content Include="Content\Images\carousel.gif" />
+    <Content Include="Content\Images\Cars\alfaromeo_147_2006.jpg" />
+    <Content Include="Content\Images\Cars\alfaromeo_159_2008.jpg" />
+    <Content Include="Content\Images\Cars\audi_a3_2003.jpg" />
+    <Content Include="Content\Images\Cars\audi_a4_2002.jpg" />
+    <Content Include="Content\Images\Cars\audi_Q7_2007.jpg" />
+    <Content Include="Content\Images\Cars\bmw_320d_2006.jpg" />
+    <Content Include="Content\Images\Cars\bmw_535d_2005.jpg" />
+    <Content Include="Content\Images\Cars\bmw_x3_2007.jpg" />
+    <Content Include="Content\Images\Cars\chrysler_300_2006.jpg" />
+    <Content Include="Content\Images\Cars\citroen_evasion_1998.jpg" />
+    <Content Include="Content\Images\Cars\ford_galaxy_2008.jpg" />
+    <Content Include="Content\Images\Cars\honda_accord_2008.jpg" />
+    <Content Include="Content\Images\Cars\honda_civic_2006.jpg" />
+    <Content Include="Content\Images\Cars\honda_cr-z_2010.jpg" />
+    <Content Include="Content\Images\Cars\hyundai_i30_2008.jpg" />
+    <Content Include="Content\Images\Cars\hyundai_santafe_2007.jpg" />
+    <Content Include="Content\Images\Cars\lancia_ypsilon_2006.jpg" />
+    <Content Include="Content\Images\Cars\lincoln_2011towncar_2010.jpg" />
+    <Content Include="Content\Images\Cars\lincoln_towncar_2006.jpg" />
+    <Content Include="Content\Images\Cars\mercedesbenz_aclass.jpg" />
+    <Content Include="Content\Images\Cars\mercedesbenz_bclass_lorinzer.jpg" />
+    <Content Include="Content\Images\Cars\mercedesbenz_S600_pullman_guard.jpg" />
+    <Content Include="Content\Images\Cars\mitsubishi_lancer_2008.jpg" />
+    <Content Include="Content\Images\Cars\nissan_almera_2001.jpg" />
+    <Content Include="Content\Images\Cars\nissan_qashqai_2008.jpg" />
+    <Content Include="Content\Images\Cars\opel_corsa_2004.jpg" />
+    <Content Include="Content\Images\Cars\opel_vectra_2008.jpg" />
+    <Content Include="Content\Images\Cars\peugeot_407_2006.jpg" />
+    <Content Include="Content\Images\Cars\renault_laguna_2008.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\alfaromeo_147_2006.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\alfaromeo_159_2008.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\audi_a3_2003.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\audi_a4_2002.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\audi_Q7_2007.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\bmw_320d_2006.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\bmw_535d_2005.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\bmw_x3_2007.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\chrysler_300_2006.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\citroen_evasion_1998.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\ford_galaxy_2008.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\hatchback.png" />
+    <Content Include="Content\Images\Cars\Thumbs\honda_accord_2008.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\honda_civic_2006.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\honda_cr-z_2010.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\hyundai_i30_2008.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\hyundai_santafe_2007.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\lancia_ypsilon_2006.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\limousine.png" />
+    <Content Include="Content\Images\Cars\Thumbs\lincoln_2011towncar_2010.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\lincoln_towncar_2006.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\mercedesbenz_aclass.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\mercedesbenz_bclass_lorinzer.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\mercedesbenz_S600_pullman_guard.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\mitsubishi_lancer_2008.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\nissan_almera_2001.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\nissan_qashqai_2008.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\opel_corsa_2004.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\opel_vectra_2008.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\peoplecarrier.png" />
+    <Content Include="Content\Images\Cars\Thumbs\peugeot_407_2006.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\renault_laguna_2008.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\saloon.png" />
+    <Content Include="Content\Images\Cars\Thumbs\suv.png" />
+    <Content Include="Content\Images\Cars\Thumbs\toyota_avensis_2008.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\toyota_corolla_spacio_2007.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\toyota_landcruiser100_2005.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\van.png" />
+    <Content Include="Content\Images\Cars\Thumbs\volvo_c30_2009.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\volvo_s60_2010.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\volvo_xc90_2006.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\vw_golf_2008.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\vw_passat_2005.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\vw_phaeton_2005.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\vw_touareg_2010.jpg" />
+    <Content Include="Content\Images\Cars\Thumbs\vw_touran_2008.jpg" />
+    <Content Include="Content\Images\Cars\toyota_avensis_2008.jpg" />
+    <Content Include="Content\Images\Cars\toyota_corolla_spacio_2007.jpg" />
+    <Content Include="Content\Images\Cars\toyota_landcruiser100_2005.jpg" />
+    <Content Include="Content\Images\Cars\volvo_c30_2009.jpg" />
+    <Content Include="Content\Images\Cars\volvo_s60_2010.jpg" />
+    <Content Include="Content\Images\Cars\volvo_xc90_2006.jpg" />
+    <Content Include="Content\Images\Cars\vw_golf_2008.jpg" />
+    <Content Include="Content\Images\Cars\vw_passat_2005.jpg" />
+    <Content Include="Content\Images\Cars\vw_phaeton_2005.jpg" />
+    <Content Include="Content\Images\Cars\vw_touareg_2010.jpg" />
+    <Content Include="Content\Images\Cars\vw_touran_2008.jpg" />
+    <Content Include="Content\Images\categories.png" />
+    <Content Include="Content\Images\catsBack.png" />
+    <Content Include="Content\Images\dlBg.png" />
+    <Content Include="Content\Images\favico.ico" />
+    <Content Include="Content\Images\footBg.png" />
+    <Content Include="Content\Images\grid.gif" />
+    <Content Include="Content\Images\overlayBg.png" />
+    <Content Include="Content\Images\rentLogo.png" />
+    <Content Include="Content\Images\rtbNormalViewsBg.png" />
+    <Content Include="Content\Images\skin.png" />
+    <Content Include="Content\Images\skinBut.png" />
+    <Content Include="Content\Images\sl.png" />
+    <Content Include="Content\Images\sourceBut.png" />
+    <Content Include="Content\Images\tiles.gif" />
+    <Content Include="Content\Images\vehiclesBg.png" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\telerik.clear.css" />
+    <Content Include="Content\telerik.common.min.css" />
+    <Content Include="DB.sql" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\2013.1.219\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\2013.1.219\jquery.validate.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.all.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.autocomplete.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.calendar.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.chart.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.combobox.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.common.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.datepicker.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.datetimepicker.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.draganddrop.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.editor.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.grid.editing.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.grid.filtering.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.grid.grouping.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.grid.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.grid.reordering.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.grid.resizing.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.imagebrowser.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.list.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.menu.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.panelbar.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.slider.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.splitter.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.tabstrip.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.textbox.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.timepicker.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.treeview.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.upload.min.js" />
+    <Content Include="Scripts\2013.1.219\telerik.window.min.js" />
+    <Content Include="Views\Car\Details.aspx" />
+    <Content Include="Views\Car\Index.aspx" />
+    <Content Include="Views\Car\NotFound.aspx" />
+    <Content Include="Views\Shared\CarDetails.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\Date.ascx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\RentalOrderForm.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.bg-BG.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.bg-BG.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\EditorLocalization.de-DE.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.de-DE.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\EditorLocalization.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.en-US.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\EditorLocalization.fr-FR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.fr-FR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\EditorLocalization.nl-NL.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.nl-NL.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\EditorLocalization.pl-PL.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.pl-PL.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\EditorLocalization.pt-BR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.pt-BR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\EditorLocalization.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\EditorLocalization.ru-RU.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.ru-RU.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\EditorLocalization.uk-UA.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.uk-UA.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.bg-BG.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.bg-BG.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.de-DE.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.de-DE.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.en-US.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.es-ES.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.es-ES.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.fr-FR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.fr-FR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.pl-PL.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.pl-PL.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.pt-BR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.pt-BR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.pt-PT.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.pt-PT.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.ru-RU.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.ru-RU.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.uk-UA.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.uk-UA.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UploadLocalization.bg-BG.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.bg-BG.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UploadLocalization.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.en-US.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UploadLocalization.pl-PL.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.pl-PL.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UploadLocalization.ru-RU.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.ru-RU.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SofiaCarRental.DAL\SofiaCarRental.DAL.csproj">
+      <Project>{A0E1F086-ADBA-4BE8-9CF5-D7D8F8A35EB8}</Project>
+      <Name>SofiaCarRental.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.da-DK.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.da-DK.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\EditorLocalization.pt-PT.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.pt-PT.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\EditorLocalization.zh-CN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.zh-CN.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.da-DK.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.da-DK.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.nl-NL.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.nl-NL.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.zh-CN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.zh-CN.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UploadLocalization.da-DK.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.da-DK.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UploadLocalization.fr-FR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.fr-FR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UploadLocalization.nl-NL.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.nl-NL.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UploadLocalization.pt-BR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.pt-BR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UploadLocalization.pt-PT.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.pt-PT.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UploadLocalization.zh-CN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UploadLocalization.zh-CN.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63276</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>

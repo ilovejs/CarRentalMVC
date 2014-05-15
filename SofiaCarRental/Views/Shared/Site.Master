@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/2013.2.611/jquery-1.7.1.min.js") %>"></script>
+</head>
+<body>
+    <div class="page">
+        <div class="box">
+            <h1>
+                <span>Rent a Car Sample Application</span>
+            </h1>
+            <div class="mainMenu">
+                <%: Html.Telerik().Menu()
+                .Name("menu")
+                .Orientation(MenuOrientation.Horizontal)
+                .Items(menu => 
+                    {
+                        menu.Add()
+                            .Text("Vehicle fleet")
+                            .Action("Index", "Car");
+
+                        menu.Add()
+                            .Text("About")
+                            .Action("About", "Home");
+                    })
+                    .ItemAction((item) => {
+                        if (item.ControllerName == ViewContext.RouteData.Values["controller"].ToString())
+                        {
+                            item.HtmlAttributes["class"] += " t-highlighted";
+                        }
+                    })
+                %>
+            </div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div id="footer">
+            <div class="copyInfo">
+                Copyright 2002-2011 &copy; Telerik. All rights reserved.
+                <ul>
+                    <li><a href="http://www.telerik.com/company/contact-us.aspx" target="_blank">Contact
+                        Us</a></li>
+                    <li><a href="http://feedback.telerik.com/Project/114/Feedback/List/Resource%20Request" target="_blank">
+                        Feedback</a></li>
+                    <li><a href="http://www.telerik.com/terms.aspx" target="_blank">Terms of Use</a></li>
+                    <li><a href="http://www.telerik.com/privacy-policy.aspx" target="_blank">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <%= Html.Telerik().ScriptRegistrar().jQuery(false) %>
+    <%= Html.Telerik().StyleSheetRegistrar()
+        .DefaultGroup(group => group.Add("telerik.common.min.css")
+                                    .Add("telerik.clear.css"))
+    %>
+</body>
+</html>

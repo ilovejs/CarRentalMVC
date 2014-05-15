@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDiagrams>
+  <entityDiagramsDiagram dslVersion="2.0.0.0" absoluteBounds="0, 0, 11, 14.5" name="EntityDiagrams" isDefault="true">
+    <DomainModelMoniker name="/SofiaCarRentalContext" />
+    <nestedChildShapes>
+      <classShape Id="287f1be5-7a11-4377-a37a-0ab260792d77" absoluteBounds="7.25, 10.625, 1.5, 2.5319775390625008">
+        <DomainClassMoniker name="/SofiaCarRentalContext/RentalRate" />
+        <nestedChildShapes>
+          <elementListCompartment Id="52dfe82f-133e-4216-af0e-c0babfb8e495" absoluteBounds="7.2650000000000006, 11.135, 1.4700000000000002, 1.2108968098958333" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="c5168d55-8291-4709-97ea-588bae2bc0e4" absoluteBounds="7.2650000000000006, 12.355896809895832, 1.4700000000000002, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="5a3e5b50-b300-4572-86d6-585a8b6ab8ef" absoluteBounds="7.2650000000000006, 12.615286458333333, 1.4700000000000002, 0.44169108072916652" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="23d71f62-88ad-4b6d-b9a5-22a69554428b" absoluteBounds="4.75, 5.25, 1.5, 4.6472932942708312">
+        <DomainClassMoniker name="/SofiaCarRentalContext/RentalOrder" />
+        <nestedChildShapes>
+          <elementListCompartment Id="2f2695c2-e8fe-4999-b690-46c981beaa67" absoluteBounds="4.7650000000000006, 5.76, 1.4700000000000002, 2.941609700520833" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="8eed7078-97bb-41fc-a5bb-77b951d06416" absoluteBounds="4.7650000000000006, 8.7116097005208317, 1.4700000000000002, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="58c3afba-a08b-4377-bbd2-637c8759daeb" absoluteBounds="4.7650000000000006, 8.9709993489583333, 1.4700000000000002, 0.8262939453125" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="1e96323e-a9f0-4976-b433-cbb472ad1209" absoluteBounds="7.25, 5.25, 1.5, 2.9165804036458338">
+        <DomainClassMoniker name="/SofiaCarRentalContext/Employee" />
+        <nestedChildShapes>
+          <elementListCompartment Id="06907c38-7eca-4b55-bc93-1fe75253e2c6" absoluteBounds="7.2650000000000006, 5.76, 1.4700000000000002, 1.5954996744791667" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="ef13bfbd-2072-4001-99f8-25bf81831814" absoluteBounds="7.2650000000000006, 7.3654996744791665, 1.4700000000000002, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="e4691856-2308-4d3e-8903-399bb647faf6" absoluteBounds="7.2650000000000006, 7.6248893229166663, 1.4700000000000002, 0.44169108072916652" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="ec7759c2-f4d1-4fbe-9410-e1f6bb47cee2" absoluteBounds="1.875, 5.375, 1.5, 3.108881835937499">
+        <DomainClassMoniker name="/SofiaCarRentalContext/Customer" />
+        <nestedChildShapes>
+          <elementListCompartment Id="c6ad60e6-e4fd-442a-90c8-b57e5454f2bb" absoluteBounds="1.8900000000000001, 5.885, 1.4700000000000002, 1.7878011067708333" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="42834f1e-60e7-41f0-a127-7de44c1bfe7f" absoluteBounds="1.8900000000000001, 7.6828011067708335, 1.4700000000000002, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="20d2c2c3-0232-47c3-acdf-fc5b21c27058" absoluteBounds="1.8900000000000001, 7.9421907552083333, 1.4700000000000002, 0.44169108072916652" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="fdb8ab5f-4a07-4b2c-962e-3a8006886201" absoluteBounds="4.75, 10.375, 1.5, 2.3396761067708312">
+        <DomainClassMoniker name="/SofiaCarRentalContext/Category" />
+        <nestedChildShapes>
+          <elementListCompartment Id="8d2971dd-9d62-45d9-b867-57e2892c7e84" absoluteBounds="4.765, 10.885, 1.4700000000000002, 0.8262939453125" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="a06cbada-e99f-4cb0-b93e-cdf56d300022" absoluteBounds="4.765, 11.7212939453125, 1.4700000000000002, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="a43e511c-d259-4fe5-8f63-0355509dee53" absoluteBounds="4.765, 11.980683593750001, 1.4700000000000002, 0.63399251302083326" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="5eaf90db-54e7-4637-9c68-815e61e6081a" absoluteBounds="2, 9, 1.5, 5.2241975911458312">
+        <DomainClassMoniker name="/SofiaCarRentalContext/Car" />
+        <nestedChildShapes>
+          <elementListCompartment Id="e8c4afe0-6ae1-41bd-84b5-6e43d9dcce8a" absoluteBounds="2.015, 9.51, 1.4700000000000002, 3.7108154296875" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="3802f41b-0a47-49f3-bfda-06a43fb4284f" absoluteBounds="2.015, 13.2308154296875, 1.4700000000000002, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="22fe036e-9b58-42d9-869f-318756279501" absoluteBounds="2.015, 13.490205078125, 1.4700000000000002, 0.633992513020833" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <associationConnector edgePoints="[(7.25 : 11.6698380533854); (6.25 : 11.6698380533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+        <AssociationMoniker Id="df4ba565-7175-441a-ab28-86511b2945e0" />
+        <relativeChildShapes />
+        <nodes>
+          <classShapeMoniker Id="287f1be5-7a11-4377-a37a-0ab260792d77" />
+          <classShapeMoniker Id="fdb8ab5f-4a07-4b2c-962e-3a8006886201" />
+        </nodes>
+      </associationConnector>
+      <associationConnector edgePoints="[(4.75 : 9.44864664713542); (3.5 : 9.44864664713542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+        <AssociationMoniker Id="48e43beb-ecb9-4ca1-9dac-0320099d12fe" />
+        <relativeChildShapes />
+        <nodes>
+          <classShapeMoniker Id="23d71f62-88ad-4b6d-b9a5-22a69554428b" />
+          <classShapeMoniker Id="5eaf90db-54e7-4637-9c68-815e61e6081a" />
+        </nodes>
+      </associationConnector>
+      <associationConnector edgePoints="[(4.75 : 6.92944091796875); (3.375 : 6.92944091796875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+        <AssociationMoniker Id="b528e361-f905-413d-97b8-91cc47a64c58" />
+        <relativeChildShapes />
+        <nodes>
+          <classShapeMoniker Id="23d71f62-88ad-4b6d-b9a5-22a69554428b" />
+          <classShapeMoniker Id="ec7759c2-f4d1-4fbe-9410-e1f6bb47cee2" />
+        </nodes>
+      </associationConnector>
+      <associationConnector edgePoints="[(6.25 : 6.70829020182292); (7.25 : 6.70829020182292)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+        <AssociationMoniker Id="4355012d-e6d5-4c1f-9cab-f321562147ba" />
+        <relativeChildShapes />
+        <nodes>
+          <classShapeMoniker Id="23d71f62-88ad-4b6d-b9a5-22a69554428b" />
+          <classShapeMoniker Id="1e96323e-a9f0-4976-b433-cbb472ad1209" />
+        </nodes>
+      </associationConnector>
+      <associationConnector edgePoints="[(3.5 : 11.5448380533854); (4.75 : 11.5448380533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+        <AssociationMoniker Id="7ee51f80-b253-492e-8a59-353d3307db63" />
+        <relativeChildShapes />
+        <nodes>
+          <classShapeMoniker Id="5eaf90db-54e7-4637-9c68-815e61e6081a" />
+          <classShapeMoniker Id="fdb8ab5f-4a07-4b2c-962e-3a8006886201" />
+        </nodes>
+      </associationConnector>
+    </nestedChildShapes>
+  </entityDiagramsDiagram>
+</EntityDiagrams>

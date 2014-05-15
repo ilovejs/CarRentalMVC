@@ -1,0 +1,402 @@
+﻿/* -- Rent a Car CSS -- */
+html, body, .page
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: #0f232f;
+    font: 12px/13px Arial, Helvetica, sans-serif;
+    background: #97a6ab url('Images/bgFill.jpg') repeat-x 0 0;
+}
+
+a:link, a:active
+{
+    color: #0f232f;
+}
+
+a:hover
+{
+    color: #2f434f;
+}
+
+a:visited
+{
+    color: #1f333f;
+}
+
+a img
+{
+	border-width:0;
+}
+
+body
+{
+    background: #97a6ab url('Images/bgFill.jpg') repeat-x 0 0;
+}
+
+.page
+{
+    display: inline-block;
+    min-height: 600px;
+    background: transparent url('Images/bg.jpg') no-repeat 0 0;
+}
+
+.box
+{
+    width: 1000px;
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home
+{
+    background: transparent url('Images/bgDates.png') no-repeat 0 60px;
+}
+
+.box h1
+{
+    position: absolute;
+    width: 222px;
+    height: 42px;
+    margin: 0;
+    padding: 0;
+    top: 20px;
+    left: 0;
+    background: transparent url('Images/rentLogo.png') no-repeat 0 0;
+}
+
+.box h1 span
+{
+    display: none;
+}
+
+.vehiclesBox h2,
+.detailsBox h2,
+.aboutBox h2 {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+/* -- mainMenu -- */
+
+.mainMenu
+{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    z-index: 1;
+}
+
+#menu 
+{
+	background: none;
+	text-transform: uppercase;
+	border: none;
+}
+
+#menu li
+{
+	padding: 0 3px;
+}
+
+#menu .t-link 
+{
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;	
+	padding: 5px 10px;
+}
+
+#menu .t-highlighted .t-link
+{
+	background-color: #FFFFFF;
+    border-color: #72818B #A6AFB6 #A6AFB6 #94A0A7;
+    box-shadow: 0 1px 2px #B8C1C6 inset;
+}
+
+#menu .t-highlighted .t-state-hover
+{
+    box-shadow: 0 1px 2px #d50003 inset;
+}
+
+/* -- DatePickers -- */
+
+.datePickers 
+{
+    height: 200px;
+    left: 58px;
+    overflow: hidden;
+    padding-top: 85px;
+    position: relative;
+    width: 436px;
+}
+
+.picker 
+{
+	float: left;
+    height: 120px;
+    padding-bottom: 5px;
+    padding-top: 15px;
+    width: 50%;	
+}
+
+.picker dl, 
+.picker dl dt, 
+.picker dl dd 
+{
+	margin: 0;
+	padding: 0;
+}
+
+.picker dl dt
+{
+	padding: 10px 0 10px 25px;
+	font-size: 14px;
+}
+
+.picker dl dd
+{
+	padding: 6px;
+	line-height: 23px;
+}
+
+.picker dl dd label
+{
+	display: inline-block;
+	width: 50px;
+	text-align: right;
+}
+
+.submitBut 
+{
+	clear: both;
+	text-align: center;
+}
+
+.submitBut span 
+{
+	font-style: italic;
+    padding: 0 10px;
+}
+
+.validation-summary-errors 
+{
+	padding: 10px;
+	color: #ff0000;	
+}
+
+.validation-summary-errors ul 
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;	
+}
+
+.vehiclesBox, 
+{
+    margin: 60px 0 20px 0;
+    padding: 0;
+    position: relative;
+    border-bottom: 3px solid #707f89;
+    background: url("Images/footBg.png") repeat-x scroll 0 25px transparent;   
+}
+
+.detailsBox, .aboutBox 
+{
+    margin: 80px 0 20px 0;
+    padding: 35px 0 0 0;
+    position: relative;
+    border-bottom: 3px solid #707f89;
+    background: url("Images/footBg.png") repeat-x scroll 0 25px transparent;    
+}
+
+.aboutBox 
+{
+    border-bottom: 0;
+    background: none;
+}
+
+.details
+{
+    padding: 10px 0 20px 0;
+    background-color: rgba(250,250,250,.7);
+}
+
+.infoBox 
+{
+	background-color: #fff;
+}
+
+.infoBox:after, .carInfo dl:after, .carInfo form:after
+{
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    zoom: 1;
+}
+
+.carImage
+{
+	float: left;
+	width: 350px;
+	margin: 10px 30px 10px 150px;
+}
+
+.carInfo
+{
+	float: left;
+	margin: 0;
+	padding: 0 0 30px 30px;	
+}
+.carInfo dl 
+{
+	float: left;
+	margin: 20px 0 30px 0;
+	padding: 0;	
+}
+
+.carInfo dl dt, .carInfo dl dd
+{
+	float: left;
+	font-size: 14px;
+	margin: 0;
+	padding: 5px;	
+}
+
+.carInfo dl dt
+{
+	clear: left;
+	width: 60px;
+	text-align: right;
+}
+
+.carInfo dd
+{
+	float: none;
+}
+
+.carInfo h2 {
+    padding: 50px 5px 5px 0;
+    margin: 0;
+}
+
+.carInfo form 
+{
+	margin: 10px 0 0 0;
+	padding: 10px;
+	border-top: 2px solid #dde2e4;
+	width: 300px;
+}
+
+.carInfo form .floated
+{
+	float: left;
+	padding: 0 20px 0 0;
+}
+
+.carInfo form .floated label, .carInfo form .floated .t-datepicker
+{
+	float: left;
+	clear: both;
+}
+
+.carInfo form .floated label
+{
+	padding: 0 0 5px 0;
+}
+
+.carInfo form .t-button
+{
+	margin-top: 17px;
+}
+
+#toggle-button
+{
+	display: block;
+	clear: both;
+}
+
+.ordersInfo 
+{
+	padding: 0 30px;
+}
+
+.ordersInfo .back 
+{
+	margin-top: 20px;
+}
+
+/* -- Footer -- */
+
+#footer 
+{ 
+    background: url("Images/footBg.png") repeat-x scroll 0 0 transparent;
+    height: 85px;
+    margin: 30px 0 0;
+    padding-top: 15px;
+    position: relative;
+    width: 100%;
+    font-size: 11px;
+}
+
+.copyInfo 
+{ 
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+}
+
+.copyInfo ul 
+{
+    list-style-type: none;
+    margin: 15px 0 0 -10px;
+    padding: 0;
+}
+
+.copyInfo ul li 
+{
+    border-right: 1px solid #586971;
+    float: left;
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* -- About -- */
+
+.col {
+    float: left;
+    width: 530px;
+}
+
+.right {
+    width: 350px;
+}
+
+.aboutBox ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 20px;
+    max-width: 800px;
+}
+
+.aboutBox ul li {
+    margin: 0;
+    padding: 0 0 10px;
+}
+
+.right ul li a {
+    display: block;
+    height: 36px;
+    margin: 0;
+    padding: 0;
+    width: 203px;
+}
+
+.right ul li a span {
+    display: none;
+}

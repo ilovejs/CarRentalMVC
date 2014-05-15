@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SofiaCarRental", "SofiaCarRental\SofiaCarRental.csproj", "{D159C6C4-A50C-4B20-A750-B1959820E4AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SofiaCarRental.DAL", "SofiaCarRental.DAL\SofiaCarRental.DAL.csproj", "{A0E1F086-ADBA-4BE8-9CF5-D7D8F8A35EB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{10A12BC1-158D-4239-A173-37B19EF3514C}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D159C6C4-A50C-4B20-A750-B1959820E4AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D159C6C4-A50C-4B20-A750-B1959820E4AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D159C6C4-A50C-4B20-A750-B1959820E4AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D159C6C4-A50C-4B20-A750-B1959820E4AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0E1F086-ADBA-4BE8-9CF5-D7D8F8A35EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E1F086-ADBA-4BE8-9CF5-D7D8F8A35EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E1F086-ADBA-4BE8-9CF5-D7D8F8A35EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E1F086-ADBA-4BE8-9CF5-D7D8F8A35EB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
